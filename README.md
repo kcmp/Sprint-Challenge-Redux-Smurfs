@@ -23,8 +23,16 @@ In this challenge, you are to build the Smurfs village once again, only this tim
 Demonstrate your understanding of this Sprint's concepts by answering the following free-form questions. Edit this document to include your answers after each question. Make sure to leave a blank line above and below your answer so it is clear and easy to read by your project manager.
 
 - [ ] In your own words, describe `actions`, `reducers` and the `store` and their role in Redux. What does each piece do? Why is the store known as a 'single source of truth' in a redux application?
+
+Actions are data-types or payloads of information that send data from your application to your store. Action creators  send the actions to reducers which figure out what to do with the action that is being sent, and pass that data up to the store. Reducers contain the functionality of the state. The store is the single container for all our data. A store is a single source of truth because it holds all the global state that needed for the app.
+
 - [ ] What is the difference between Application state and Component state? When would be a good time to use one over the other?
+
+Application state is a global state while component state is a state that needs to be passed down through props. When dealing with apps that need to be able to scale, it can be hard to keep up with the flow of data with multiple components, so using application state can help with those scaling issues.
+
 - [ ] Describe `redux-thunk`, what does it allow us to do? How does it change our `action-creators`?
+
+Redux thunk is a type of middleware. Middleware lies between dispatching an action and a reducer. It usually helps with logging info, or providing async capabilities. Redux Thunk middleware allows you to write action creators that return a function instead of an action. The thunk can be used to delay the dispatch of an action, or to dispatch only if a certain condition is met. The inner function receives the store methods dispatch and getState as parameters.
 
 ## Project Set Up
 
