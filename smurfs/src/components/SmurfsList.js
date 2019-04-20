@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Smurf from './Smurf';
 
- class SmurfsList extends Component {
+class SmurfsList extends Component {
   render() {
     return (
       <div>
@@ -9,7 +9,7 @@ import Smurf from './Smurf';
         {this.props.smurfs.map(smurf => (
           <Smurf smurf={smurf} 
           key={smurf.id}
-          
+          handleDeleteSmurf={this.props.handleDeleteSmurf}
          />
         ))}
       </div>
@@ -17,4 +17,4 @@ import Smurf from './Smurf';
   }
 }
 
- export default SmurfsList;
+export default SmurfsList;
