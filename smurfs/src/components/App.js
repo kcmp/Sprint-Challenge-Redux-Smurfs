@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import { connect } from "react-redux";
 import { getSmurfs, addSmurf } from "../actions";
-import SmurfList from "./SmurfsList";
+import SmurfsList from "./SmurfsList";
 import SmurfForm from "./SmurfForm";
 
 class App extends Component {
@@ -23,7 +23,7 @@ class App extends Component {
         {this.props.fetchingSmurfs ? (
           <div>Loading...</div>
         ) : (
-          <SmurfList
+          <SmurfsList
             smurfs={this.props.smurfs}            
           />
         )}
